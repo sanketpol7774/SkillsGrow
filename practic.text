@@ -1,0 +1,273 @@
+var adding = [
+
+    {
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04Edvunqx2oK0qrLREfMb7yFfgBzld1X_2Q&s",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    },
+    {
+        img:"https://miro.medium.com/v2/resize:fit:1400/1*60RQyL8WeifCvfJX8dQCcQ.jpeg",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    },
+    {
+        img:"https://img.youtube.com/vi/46cXFUzR9XM/maxresdefault.jpg",
+        head: "Bella Ciao Full Song | La Casa De Papel | Money Heist | Netflix India",
+        heading: "Netflix",
+        views: "10M Views • 3 Months Ago"
+    },
+
+    {
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04Edvunqx2oK0qrLREfMb7yFfgBzld1X_2Q&s",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    },
+    {
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04Edvunqx2oK0qrLREfMb7yFfgBzld1X_2Q&s",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    },
+    {
+        img:"https://miro.medium.com/v2/resize:fit:1400/1*60RQyL8WeifCvfJX8dQCcQ.jpeg",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    },
+    {
+        img:"https://img.youtube.com/vi/46cXFUzR9XM/maxresdefault.jpg",
+        head: "Bella Ciao Full Song | La Casa De Papel | Money Heist | Netflix India",
+        heading: "Netflix",
+        views: "10M Views • 3 Months Ago"
+    },
+
+    {
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04Edvunqx2oK0qrLREfMb7yFfgBzld1X_2Q&s",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    }, {
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04Edvunqx2oK0qrLREfMb7yFfgBzld1X_2Q&s",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    },
+    {
+        img:"https://miro.medium.com/v2/resize:fit:1400/1*60RQyL8WeifCvfJX8dQCcQ.jpeg",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    },
+    {
+        img:"https://img.youtube.com/vi/46cXFUzR9XM/maxresdefault.jpg",
+        head: "Bella Ciao Full Song | La Casa De Papel | Money Heist | Netflix India",
+        heading: "Netflix",
+        views: "10M Views • 3 Months Ago"
+    },
+
+    {
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04Edvunqx2oK0qrLREfMb7yFfgBzld1X_2Q&s",
+        head: "Top 5 YouTuber Vloggers Exposed @soravjoshivlogs Reality of YouTubers",
+        heading: "GyanGuruj",
+        views: "10M Views • 3 Months Ago"
+    },
+];
+
+function createcard() {
+    var searchinput = document.getElementById("searchinput").value.toLowerCase();
+
+
+    var searchvideos = adding.filter(e => e.head.toLowerCase().includes(searchinput));
+
+    console.log(searchvideos); 
+
+    var videos__container = document.querySelector(".videos__container");
+    videos__container.innerHTML = '';
+
+  
+    searchvideos.forEach(a => {
+        var video = document.createElement('div');
+        video.className = "video";
+
+        var video__thumbnail = document.createElement("div");
+        video__thumbnail.className = "video__thumbnail";
+        var img = document.createElement('img');
+        img.src = a.img;
+        img.alt = "Video thumbnail"; 
+        video__thumbnail.appendChild(img);
+        video.appendChild(video__thumbnail);
+
+        var video__details = document.createElement("div");
+        video__details.className = "video__details";
+        var title = document.createElement("div");
+        title.className = "title";
+        var head = document.createElement("h3");
+        head.textContent = a.head;
+        title.appendChild(head);
+        var heading = document.createElement("a");
+        heading.href = "#";
+        heading.textContent = a.heading;
+        title.appendChild(heading);
+        var views = document.createElement("span");
+        views.textContent = a.views;
+        video__details.appendChild(title);
+        video__details.appendChild(views);
+
+        video.appendChild(video__details);
+        videos__container.appendChild(video);
+    });
+}
+
+
+document.getElementById("searchinput").addEventListener('input', createcard);
+
+
+createcard();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var adding = [
+    {
+        img: "AnimationImg-DgIKhrvX.jpg"
+    }
+];
+
+adding.forEach(a => {
+   
+    var slidefirst = document.querySelector(".slidefirst");
+    
+
+    var slide = document.createElement('div');
+    slide.className = "slide";  
+
+
+    var img = document.createElement('img');
+    img.src = a.img;
+
+   
+    slide.appendChild(img);
+
+
+    slidefirst.appendChild(slide);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var sum=[
+    {
+        image:"ri-account-circle-line four",
+        name:"sanket pol",
+        paragraf:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolore beatae possimus? Minus quidem atque amet dolore nam mollitia non. Perspiciatis dolor illo ex tempora fugit esse consequatur animi ab quasi ducimus minus recusandae, assumenda aliquam, doloribus dolorum voluptatem accusamus quam? Deleniti distinctio voluptatem eveniet maxime facilis, maiores eos. Quam.",
+        
+    }
+]
+
+
+sum.forEach(b=>{
+
+    
+    var review_card = document.querySelector(".review_card");
+    var firstcart = document.createElement('div');
+    firstcart.className = "firstcart"; 
+
+    var profile = document.createElement('div');
+    profile.className = "profile";
+
+    var image = document.createElement('img');
+    image.className = "image";
+    var h3 = document.createElement('h3');
+    var review_text = document.createElement('div');
+    review_text.className = "review_text";
+
+    review_card.appendChild(firstcart);
+   firstcart.appendChild(profile);
+    firstcart.appendChild(image);
+    firstcart.appendChild(h3);
+    firstcart.appendChild(review_text);
+
+    
+    image.src = b.image;
+    name.textContent=b.h3;
+    paragraf.textContent=b.review_text;
+
+    
+})
